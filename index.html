@@ -3,82 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>জাহিদ হাসান বিপুল | স্মার্ট বড়াইগ্রাম</title>
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;700&display=swap" rel="stylesheet">
+    <title>জাহিদ হাসান বিপুল - স্মার্ট বড়াইগ্রামের রূপকার</title>
     <style>
-        :root { --primary-green: #006a4e; --highlight-yellow: #fdd835; --white: #ffffff; }
-        body { font-family: 'Hind Siliguri', sans-serif; background: #f4f4f4; margin: 0; line-height: 1.6; }
+        :root { --green: #006a4e; --red: #f42a41; --dark: #121212; --light: #ffffff; }
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; background: var(--dark); color: var(--light); }
         
-        .header { background: var(--primary-green); color: white; padding: 40px 20px; text-align: center; border-bottom: 6px solid var(--highlight-yellow); }
-        .header h1 { margin: 0; font-size: 2.2rem; }
-        .tagline { background: var(--highlight-yellow); color: #000; padding: 5px 20px; border-radius: 20px; display: inline-block; margin-top: 10px; font-weight: bold; }
+        /* Ticker - টিভির মতো চলন্ত লেখা */
+        .ticker { background: var(--red); color: white; padding: 10px 0; overflow: hidden; white-space: nowrap; font-weight: bold; position: fixed; top: 0; width: 100%; z-index: 1000; }
+        .ticker span { display: inline-block; padding-left: 100%; animation: ticker 25s linear infinite; }
+        @keyframes ticker { 0% { transform: translate(0, 0); } 100% { transform: translate(-100%, 0); } }
+
+        /* Hero */
+        .hero { padding: 100px 20px 50px; text-align: center; background: linear-gradient(to bottom, var(--green), var(--dark)); }
+        .profile-img { width: 180px; height: 180px; border-radius: 50%; border: 5px solid var(--red); object-fit: cover; box-shadow: 0 0 20px rgba(244, 42, 65, 0.5); }
         
-        .container { max-width: 1000px; margin: 20px auto; padding: 20px; display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
-        
-        .promise-card { background: white; padding: 20px; margin-bottom: 15px; border-radius: 12px; border-left: 5px solid var(--primary-green); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .promise-card h3 { color: var(--primary-green); margin-top: 0; display: flex; align-items: center; }
-        .num { background: var(--primary-green); color: white; width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.9rem; }
-        .promise-card ul { list-style: none; padding-left: 0; }
-        .promise-card li { margin-bottom: 5px; padding-left: 20px; position: relative; }
-        .promise-card li::before { content: "★"; color: #f42a41; position: absolute; left: 0; }
-        
-        .profile { background: white; padding: 20px; border-radius: 12px; text-align: center; position: sticky; top: 20px; }
-        .profile img { width: 100%; border-radius: 15px; border: 4px solid var(--primary-green); }
-        
-        @media (max-width: 768px) { .container { grid-template-columns: 1fr; } }
+        /* Grid */
+        .container { max-width: 1100px; margin: auto; padding: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+        .card { background: #1a1a1a; padding: 25px; border-radius: 15px; border-left: 5px solid var(--green); transition: 0.3s; }
+        .card:hover { border-left: 5px solid var(--red); transform: translateY(-5px); background: #222; }
+        .card h3 { color: var(--red); margin-top: 0; }
+        .card ul { padding-left: 20px; font-size: 0.9em; line-height: 1.6; }
+
+        /* Footer */
+        .footer { text-align: center; padding: 40px; background: #000; color: var(--red); font-size: 28px; font-weight: bold; border-top: 2px solid var(--green); margin-top: 50px; }
     </style>
 </head>
 <body>
 
-<div class="header">
-    <h1>আগামী প্রজন্মের স্মার্ট ও আধুনিক বড়াইগ্রাম পৌরসভা গড়তে</h1>
-    <div class="tagline">তারুণ্যের চোখে, জনতার স্বপ্ন</div>
-</div>
+    <div class="ticker">
+        <span>স্মার্ট ও আধুনিক বড়াইগ্রাম গড়তে জাহিদ হাসান বিপুলের ১০টি সুদূরপ্রসারী অঙ্গীকার - আপনার আস্থা ও সমর্থনে এগিয়ে চলাই আমাদের লক্ষ্য - সবার জন্য আধুনিক পৌরসেবা নিশ্চিত।</span>
+    </div>
 
-<div class="container">
-    <main>
-        <div class="promise-card"><h3 class="num">১</h3>সবার পৌরসভা ও দুর্নীতিমুক্ত নগরী
-            <ul><li>উপদেষ্টা পরিষদ গঠন ও স্বচ্ছ জবাবদিহিতা সভা।</li><li>প্রকল্প দুর্নীতিমুক্ত রাখতে বিশেষ সেল।</li></ul>
-        </div>
-        <div class="promise-card"><h3 class="num">২</h3>ফ্রি ইন্টারনেট ও সাশ্রয়ী বিদ্যুৎ
-            <ul><li>পৌরসভাজুরে ফ্রি ইন্টারনেট ঘোষণা।</li><li>৫০% বিদ্যুৎ সাশ্রয় ও লোডশেডিংমুক্ত নগরী।</li></ul>
-        </div>
-        <div class="promise-card"><h3 class="num">৩</h3>নিরাপদ পৌরসভা
-            <ul><li>প্রধান সড়কে CCTV স্থাপন।</li><li>অগ্নি প্রতিরোধে ১ মিনিটে পানি পাওয়ার Fire Hydrant System।</li></ul>
-        </div>
-        <div class="promise-card"><h3 class="num">৪</h3>শিল্প ও কর্মসংস্থান
-            <ul><li>রসুনভিত্তিক শিল্প ও ইন্ডাস্ট্রিয়াল এরিয়া।</li><li>বিদেশগমন প্রার্থীদের ভাষা শিক্ষা ও ঋণ সহায়তা।</li></ul>
-        </div>
-        <div class="promise-card"><h3 class="num">৫</h3>স্মার্ট সেবা
-            <ul><li>ফ্রি অ্যাপস ও ২৪/৭ কল সেন্টার।</li><li>ডিজিটাল অভিযোগ ও কোচিং ব্যবস্থা।</li></ul>
-        </div>
-        <div class="promise-card"><h3 class="num">৬</h3>উদ্যোক্তা তৈরির প্রকল্প
-            <ul><li>অনলাইন আর্নিং ও Marketplace গঠন।</li><li>কারিগরি প্রশিক্ষণ ও নারীদের স্বাবলম্বী করা।</li></ul>
-        </div>
-        <div class="promise-card"><h3 class="num">৭</h3>মেধাবী ও মাদকমুক্ত তরুণ সমাজ
-            <ul><li>Language, Fitness ও Debate Club।</li><li>সাংস্কৃতিক ও ক্রীড়া উন্নয়ন।</li></ul>
-        </div>
-        <div class="promise-card"><h3 class="num">৮</h3>শিশু ও বয়স্কদের যত্ন
-            <ul><li>মিনি পার্ক, ওয়াকিং জোন ও চাইল্ড কেয়ার।</li><li>বয়স্কদের ওষুধ ও স্বাস্থ্য সহায়তা।</li></ul>
-        </div>
-        <div class="promise-card"><h3 class="num">৯</h3>সবুজ, শীতল ও উৎপাদনমুখী শহর
-            <ul><li>পরিকল্পিত প্ল্যান্ট প্রোজেক্ট ও বৃক্ষরোপণ।</li></ul>
-        </div>
-        <div class="promise-card"><h3 class="num">১০</h3>মানবিক পৌরসভা
-            <ul><li>বিনামূল্যে আইনি, জমি সংক্রান্ত ও ব্লাড সাপোর্ট।</li><li>দ্রুত হাসপাতাল পরিবহন ও স্বল্পমূল্যের ক্যান্টিন।</li></ul>
-        </div>
-    </main>
+    <div class="hero">
+        <img src="https://ibb.co.com/v6v3pcZW" alt="জাহিদ হাসান বিপুল" class="profile-img">
+        <h1>জাহিদ হাসান বিপুল</h1>
+        <p>আহ্বায়ক, বড়াইগ্রাম উপজেলা ছাত্রদল</p>
+    </div>
 
-    <aside class="profile">
-        <img src="https://real-blue-h6ujqdypgk.edgeone.app/IMG-20260309-WA0004.jpg" alt="জাহিদ হাসান বিপুল">
-        <h2>মোছাঃ জাহিদ হাসান বিপুল</h2>
-        <p><strong>আহ্বায়ক, বড়াইগ্রাম উপজেলা ছাত্রদল</strong><br>নাটোর।</p>
-        <p>তারুণ্যের নেতৃত্বে বদলে যাবে বড়াইগ্রাম পৌরসভা।</p>
-        <div style="background: var(--primary-green); color: white; padding: 10px; border-radius: 5px;">
-            প্রয়োজনে: ০১৭৬৮-৫৭৯১৯৭
+    <div class="container">
+        <div class="grid">
+            <div class="card"><h3>১. সবার পৌরসভা ও দূর্নীতিমুক্ত নগরী</h3>
+                <ul><li>উপদেষ্টা পরিষদ গঠন (ইমাম, শিক্ষক, ডাক্তার, কৃষকসহ প্রতিনিধি)।</li><li>বছরে ১২টি স্বচ্ছতা ও জবাবদিহিতা সভা।</li><li>প্রকল্প দুর্নীতিমুক্ত রাখতে বিশেষ সেল।</li></ul>
+            </div>
+            <div class="card"><h3>২. ফ্রি ইন্টারনেট ও সাশ্রয়ী বিদ্যুৎ</h3>
+                <ul><li>পৌরসভাজুড়ে ফ্রী ইন্টারনেট।</li><li>৫০% বিদ্যুৎ সাশ্রয় ও লোডশেডিংমুক্ত নগরী।</li></ul>
+            </div>
+            <div class="card"><h3>৩. নিরাপদ পৌরসভা</h3>
+                <ul><li>প্রধান সড়কে CCTV স্থাপন।</li><li>ফায়ার হাইড্রেন্ট সিস্টেম (১ মিনিটে পানি)।</li><li>মৌলিক অধিকার নিশ্চিত করতে বিশেষ সেল।</li></ul>
+            </div>
+            <div class="card"><h3>৪. শিল্প ও কর্মসংস্থান</h3>
+                <ul><li>রসুনভিত্তিক শিল্পায়ন ও স্থানীয় শিল্প।</li><li>ইন্ডাস্ট্রিয়াল এরিয়া মেগাপরিকল্পনা।</li><li>বিদেশগামীদের ভাষা শিক্ষা ও স্বল্প ঋন।</li></ul>
+            </div>
+            <div class="card"><h3>৫. স্মার্ট সেবা</h3>
+                <ul><li>ফ্রি অ্যাপস ও ২৪/৭ কল সেন্টার।</li><li>ডিজিটাল অভিযোগ ব্যবস্থা।</li><li>অ্যাপসে ফ্রি প্রাইভেট ও কোচিং সুবিধা।</li></ul>
+            </div>
+            <div class="card"><h3>৬. উদ্যোক্তা তৈরির প্রকল্প</h3>
+                <ul><li>অনলাইন আর্নিং ও মার্কেটপ্লেস ট্রেনিং।</li><li>কারিগরি শিক্ষার মাধ্যমে বেকার মুক্তি।</li><li>নারীদের পণ্য উৎপাদন ও বেচাকেনায় সহায়তা।</li></ul>
+            </div>
+            <div class="card"><h3>৭. মেধাবী ও মাদকমুক্ত তরুণ সমাজ</h3>
+                <ul><li>ভাষা, বিতর্ক ও সাংস্কৃতিক ক্লাব।</li><li>প্রতিটি মাঠে প্রশিক্ষক নিয়োগ ও ফিটনেস ক্লাব।</li></ul>
+            </div>
+            <div class="card"><h3>৮. শিশু ও বয়স্কদের যত্ন</h3>
+                <ul><li>মিনি পার্ক ও ওয়াকিং জোন।</li><li>চাইল্ড কেয়ার এন্ড কিডস জোন।</li><li>বয়স্কদের ঔষধ ও স্বাস্থ্য সহায়তা।</li></ul>
+            </div>
+            <div class="card"><h3>৯. সবুজ, শীতল ও উৎপাদনমুখী শহর</h3>
+                <ul><li>পরিবেশবান্ধব বৃক্ষরোপন।</li><li>ওভারহিট মুক্ত সু-সজ্জিত রাস্তাঘাট।</li></ul>
+            </div>
+            <div class="card"><h3>১০. মানবিক পৌরসভা</h3>
+                <ul><li>বিনামূল্যে আইনি ও জমি সংক্রান্ত সহায়তা।</li><li>ব্লাড সাপোর্ট, দ্রুত অ্যাম্বুলেন্স।</li><li>স্বল্পমূল্যের ক্যান্টিন।</li></ul>
+            </div>
         </div>
-    </aside>
-</div>
+    </div>
+
+    <div class="footer">
+        যোগাযোগ: +8801768579957
+    </div>
 
 </body>
 </html>
